@@ -37,7 +37,7 @@ public class usariocontroler {
     }
     
     
-     @DeleteMapping(value = "/{id}")
+     @DeleteMapping(value = "/{idUsuario}")
     public ResponseEntity<Usuario> eliminar(@PathVariable Integer idUsuario) {
         Usuario obj = usuarioService.findById(idUsuario);
         if (obj != null) {
@@ -50,7 +50,7 @@ public class usariocontroler {
     
     @PutMapping(value = "/")
     public ResponseEntity<Usuario> editar(@RequestBody Usuario usuario) {
-        Usuario obj = usuarioService.findById(usuario.getIdUsuario());
+        Usuario obj = usuarioService.findById(usuario.getidUsuario());
         if (obj != null) {
             obj.setNombres(usuario.getNombres());
             obj.setApellidos(usuario.getApellidos());

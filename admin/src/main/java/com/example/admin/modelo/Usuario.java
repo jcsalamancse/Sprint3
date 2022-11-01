@@ -10,37 +10,41 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
 @Entity
-@Table (name="usuario")
+@Table(name = "usuario")
 
-public class Usuario implements Serializable{
-  @Id 
-@Column (name = "IdUsuario")
-  
-private Integer IdUsuario;
-  
-@Column (name = "nombres")
+public class Usuario implements Serializable {
+
+    @Id
+    @Column(name = "idUsuario")
+
+    private Integer idUsuario;
+
+    @Column(name = "nombres")
     private String nombres;
-    
-    @Column (name = "apellidos")
+
+    @Column(name = "apellidos")
     private String apellidos;
-    
-    @Column (name = "telefono")
+
+    @Column(name = "telefono")
     private String telefono;
 
-    @Column (name = "direccion")
-    private String direccion; 
+    @Column(name = "direccion")
+    private String direccion;
 
-    @Column (name = "email")
-    private String email;   
+    @Column(name = "email")
+    private String email;
 
-    public Integer getIdUsuario() {
-        return IdUsuario;
+    public Integer getidUsuario() {
+        return idUsuario;
     }
 
-    public void setIdUsuario(Integer IdUsuario) {
-        this.IdUsuario = IdUsuario;
+    public Integer getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(Integer idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public String getNombres() {
@@ -83,5 +87,4 @@ private Integer IdUsuario;
         this.email = email;
     }
 
- 
 }

@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface Usuarioservice {
  
-    public Usuario save(Usuario paciente);
+    public Usuario save(Usuario usuario);
     public void delete(Integer idUsuario);
     public Usuario findById (Integer idUsuario);
     public List<Usuario> findAll();
